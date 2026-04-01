@@ -1,1 +1,109 @@
-/*# sourceMappingURL=style.css.map */
+body {
+  background: #1d1c25;
+  color: #fff;
+}
+
+.movies {
+  padding: 24px 93px 156px;
+}
+.movies__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.movies__title {
+  font-weight: 400;
+  font-family: "Nato Sans", sans-serif;
+  font-size: 32px;
+  text-align: center;
+  color: #faefd9;
+  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.movies__input {
+  width: 340px;
+  height: 46px;
+  font-weight: 400;
+  font-size: 24px;
+  font-family: "IBM Plex Sans" sans-serif;
+  color: #2b3342;
+  background: #e4ffff;
+  border: 2px solid #faefd9;
+  border-radius: 5px;
+  padding: 7px 10px;
+}
+.movies__main {
+  margin-top: 26px;
+  font-family: "IBM Plex Sans" serif;
+}
+.movies__sort {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.movies__sort-text {
+  font-weight: 400;
+  font-size: 24px;
+  color: #faefd9;
+}
+.movies__sort-categories {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 9px;
+       column-gap: 9px;
+  align-items: center;
+  padding-left: 6px;
+  padding-top: 22px;
+}
+.movies__cards {
+  display: flex;
+  font-display: row;
+  flex-wrap: wrap;
+}
+
+.categories__item {
+  width: 100px;
+  height: 42px;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  color: #faefd9;
+  background: #1d1c25;
+  border: 2px solid #faefd9;
+  border-radius: 20px;
+}
+.categories__item:hover {
+  cursor: pointer;
+}
+.categories {
+  margin-bottom: 30px;
+}
+
+.card {
+  padding: 8px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.card__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 24px;
+  color: #e0d9d9;
+}
+.card__year {
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  color: #e0d9d9;
+}
+.card__lenght {
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  color: #e0d9d9;
+}
+.card__rating {
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  color: #e0d9d9;
+}/*# sourceMappingURL=style.css.map */
