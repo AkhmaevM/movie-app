@@ -24,6 +24,22 @@ body {
         text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     }
 
+
+    &__input-wrapper {
+        background: #e4ffff;
+        border: 2px solid #faefd9;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 7px 10px;
+        border-radius: 5px;
+        border: 2px solid #faefd9;
+
+        &>img:hover{
+            cursor: pointer;
+        }
+    }
+
     &__input {
         width: 340px;
         height: 46px;
@@ -32,10 +48,9 @@ body {
         font-family: 'IBM Plex Sans' sans-serif;
         color: #2b3342;
         background: #e4ffff;
-        border: 2px solid #faefd9;
-        border-radius: 5px;
+        outline: 0;
+        border: 0;
 
-        padding: 7px 10px;
     }
 
 
@@ -100,7 +115,7 @@ body {
         margin-left: 25vw;
         margin-right: 25vw;
         column-gap: 42px;
-        
+
     }
 
     &__column {
@@ -113,7 +128,7 @@ body {
 }
 
 .card {
-   
+
     margin: 8px 20px;
     display: flex;
     flex-direction: column;
@@ -151,7 +166,7 @@ body {
         flex-direction: row;
         align-items: center;
 
-        &>span{
+        &>span {
             margin-left: 12px;
             margin-right: 2px;
         }
