@@ -7,7 +7,7 @@ body {
 
 
 .movies {
-    padding: 24px 93px 156px;
+    margin: 24px 93px 156px;
 
     &__top {
         display: flex;
@@ -40,11 +40,14 @@ body {
 
 
     &__main {
-        margin-top: 26px;
+        margin: 26px 0 126px;
         font-family: 'IBM Plex Sans' serif;
+
+
     }
 
     &__sort {
+        padding-left: 20vw;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -66,46 +69,57 @@ body {
         }
     }
 
-    &__cards {
-        display: flex;
-        font-display: row;
-        flex-wrap: wrap;
+    .categories {
+        &__item {
+            width: 100px;
+            height: 42px;
 
-    }
-
-
-}
-
-.categories {
-    &__item {
-        width: 100px;
-        height: 42px;
-
-        font-weight: 400;
-        font-size: 24px;
-        text-align: center;
-        color: #faefd9;
-        background: #1d1c25;
+            font-weight: 400;
+            font-size: 24px;
+            text-align: center;
+            color: #faefd9;
+            background: #1d1c25;
 
 
-        border: 2px solid #faefd9;
-        border-radius: 20px;
+            border: 2px solid #faefd9;
+            border-radius: 20px;
 
-        &:hover {
-            cursor: pointer;
+            &:hover {
+                cursor: pointer;
+            }
+
         }
 
+        margin-bottom: 30px;
     }
 
-    margin-bottom: 30px;
+    &__cards {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 25vw;
+        margin-right: 25vw;
+        column-gap: 42px;
+        
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+
+        row-gap: 20px;
+    }
+
 }
 
 .card {
-    padding: 8px 20px;
+   
+    margin: 8px 20px;
     display: flex;
     flex-direction: column;
-    // width: 390px;
-    // height: 166px;
+    row-gap: 10px;
+    width: 390px;
+    height: 166px;
 
     &__title {
         margin: 0;
@@ -133,6 +147,14 @@ body {
         font-weight: 400;
         font-size: 20px;
         color: #e0d9d9;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &>span{
+            margin-left: 12px;
+            margin-right: 2px;
+        }
     }
 
 }

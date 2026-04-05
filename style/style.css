@@ -4,7 +4,7 @@ body {
 }
 
 .movies {
-  padding: 24px 93px 156px;
+  margin: 24px 93px 156px;
 }
 .movies__top {
   display: flex;
@@ -32,10 +32,11 @@ body {
   padding: 7px 10px;
 }
 .movies__main {
-  margin-top: 26px;
+  margin: 26px 0 126px;
   font-family: "IBM Plex Sans" serif;
 }
 .movies__sort {
+  padding-left: 20vw;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -54,13 +55,7 @@ body {
   padding-left: 6px;
   padding-top: 22px;
 }
-.movies__cards {
-  display: flex;
-  font-display: row;
-  flex-wrap: wrap;
-}
-
-.categories__item {
+.movies .categories__item {
   width: 100px;
   height: 42px;
   font-weight: 400;
@@ -71,17 +66,34 @@ body {
   border: 2px solid #faefd9;
   border-radius: 20px;
 }
-.categories__item:hover {
+.movies .categories__item:hover {
   cursor: pointer;
 }
-.categories {
+.movies .categories {
   margin-bottom: 30px;
+}
+.movies__cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 25vw;
+  margin-right: 25vw;
+  -moz-column-gap: 42px;
+       column-gap: 42px;
+}
+.movies__column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
 }
 
 .card {
-  padding: 8px 20px;
+  margin: 8px 20px;
   display: flex;
   flex-direction: column;
+  row-gap: 10px;
+  width: 390px;
+  height: 166px;
 }
 .card__title {
   margin: 0;
@@ -106,4 +118,11 @@ body {
   font-weight: 400;
   font-size: 20px;
   color: #e0d9d9;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.card__rating > span {
+  margin-left: 12px;
+  margin-right: 2px;
 }/*# sourceMappingURL=style.css.map */
