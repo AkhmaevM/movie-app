@@ -1,5 +1,6 @@
 const userInput = document.querySelector('.movies__input');
 const searchBtn = document.querySelector('.movies__search');
+const moviesColumn = document.querySelector('.movies__column');
 
 searchBtn.addEventListener('click', async () => {
     if (userInput.value === '') {
@@ -9,9 +10,38 @@ searchBtn.addEventListener('click', async () => {
 
     let response = await fetch(`http://www.omdbapi.com/?apikey=b83f90d7&t=${userInput.value}`);
 
-    let text = await response.text(); // прочитать тело ответа как текст
+    let text = await response.json(); // прочитать тело ответа как текст
 
-    console.log(text.slice(0, 80) + '...');
     console.log(text);
+    console.log(typeof(text));
+
+
+    moviesColumn.innerHTML = `<div class="movies__column">
+                    <div class="movies__card card">
+                        <h2 class="card__title">${text.Title}</h2>
+                        <p class="card__year">${text.Year}</p>
+                        <p class="card__lenght">${text.Runtime}</p>
+                        <p class="card__rating">IMDb rating: <span class="card__rating-value">${text.imdbRating}</span> <img
+                                src="./img/star.svg" alt="star"></p>
+                    </div>`
 })
 
+
+
+
+// "Title":"The Fast and the Furious","Year":"2001","Rated":"PG-13",
+// "Released":"22 Jun 2001","Runtime":"106 min","Genre":"Action, Crime, 
+// Thriller","Director":"Rob Cohen","Writer":"Ken Li, Gary Scott Thompson, 
+// Erik Bergquist","Actors":"Vin Diesel, Paul Walker, Michelle Rodriguez",
+// "Plot":"Los Angeles police officer Brian O'Conner must decide where his loyalty
+//  really lies when he becomes enamored with the street racing world he has been sent 
+// undercover to end it.","Language":"English, Spanish","Country":"United States, Germany",
+// "Awards":"11 wins & 18 nominations total",
+// "Poster":"https://m.media-amazon.com/images/M/MV5BZGRiMDE1NTMtMThmZS00YjE4LWI1ODQtNjRkZGZlOTg2MGE1XkEyXkFqcGc@._V1_SX300.jpg",
+// "Ratings":[{"Source":"Internet Movie Database","Value":"6.8/10"},
+// {"Source":"Rotten Tomatoes","Value":"55%"},
+// {"Source":"Metacritic",
+// "Value":"58/100"}],
+// "Metascore":"58","imdbRating":"6.8","imdbVotes":"452,738","imdbID":"tt0232500",
+// "Type":"movie","DVD":"N/A","BoxOffice":"$144,745,925","Production":"N/A",
+// "Website":"N/A","Response":"True"
