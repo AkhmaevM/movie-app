@@ -23,6 +23,8 @@ searchBtn.addEventListener('click', async () => {
                         <p class="card__lenght">${text.Runtime}</p>
                         <p class="card__rating">IMDb rating: <span class="card__rating-value">${text.imdbRating}</span> <img
                                 src="./img/star.svg" alt="star"></p>
+                        
+                        <img src="${text.Poster}" alt="">
                     </div>`
 })
 
